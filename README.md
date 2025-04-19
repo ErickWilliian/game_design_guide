@@ -114,4 +114,4 @@ Sugira melhorias, corrija erros ou adicione novos exemplos.
 
 ## 🧠 Licença
 
-MIT License © [Seu Nome ou @seuGitHub]
+MIT License © Erick Willian Soares Afonso
