@@ -88,8 +88,12 @@ A prática constante é a base para crescer como game designer. Algumas formas d
 
 ---
 
-## ✅ Conclusão
+## Coisas importantes para saber
+- 2D Art
+- 3D Modelling
+- Particles
+- Shaders
+- Music
+- Sound Design
+- Animation
 
-Tornar-se um game designer não é uma jornada simples, mas é extremamente gratificante para quem ama criar experiências interativas. Com um portfólio bem construído, experiência prática, boas conexões e uma mentalidade resiliente, é possível conquistar seu espaço nessa indústria apaixonante.
-
-> **Mais importante do que apenas sonhar com criar jogos é começar, experimentar e aprender constantemente.**
