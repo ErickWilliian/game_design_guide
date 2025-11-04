@@ -79,6 +79,7 @@ public class Variaveis : MonoBehaviour
     {
       // Aqui ela é uma variável Local e so pode ser acessada dentro desta função
       string nomePlayer = "Erick ";
+      Debug.Log("Nome do jogador", nomePlayer);
     }
 
 
@@ -88,4 +89,291 @@ public class Variaveis : MonoBehaviour
     }
 }
 
+```
+
+
+## Métodos com Retorno
+
+Eles são diferentes do `void Start()` e o `void Update()` esses dois nao retornam nada pois começam com a diretiva `void`, ou seja que eles não tem retorno, no C# e linguagens fortemente tipadas você precisa indicar qual é o tipo de retorno que as funções vão ter, por exemplo se a função vai retornar um número tu deve colocar o `int` antes de nomear a função, por exemplo `int retornaNumero()`
+
+
+Você pode passar parâmetros para as funções que são variáveis que sao recebidas nas chamadas das função
+
+```c#
+using UnityEngine;
+
+public class Variaveis : MonoBehaviour
+{
+    void Start()
+    {
+      // e aqui na chamada eu passo os valores para os param
+      somaNumeros(1, 2);
+    }
+
+    void Update()
+    { 
+    }
+
+    // aqui eu faço a definição da minha função com dois param
+    // e retorno eles
+    int somaNumeros(int a, int b){
+      return a + b
+    }
+}
+
+```
+
+
+## Contador, Incremento, Decremento e Contador de tempo
+
+```c#
+using UnityEngine;
+
+public class Variaveis : MonoBehaviour
+{
+  int numero;
+  float tempo;
+
+    void Start()
+    {
+      // Incremento
+      numero = numero + 1;
+      numero = numero - 1;
+    }
+
+    void Update()
+    { 
+      // Contagem de tempo na unity
+      tempo = tempo + Time.deltaTime;
+    }
+
+}
+
+```
+
+## Arrays / Vetores
+
+
+```c#
+using UnityEngine;
+
+public class Variaveis : MonoBehaviour
+{
+  int[] numero;
+
+    void Start()
+    {
+
+    }
+
+    void Update()
+    { 
+
+    }
+
+}
+
+```
+
+## Listas e coleções 
+
+
+```c#
+using UnityEngine;
+
+public class Variaveis : MonoBehaviour
+{
+  List<int> numeros = new List<int>();
+
+    void Start()
+    {
+      // Para adicionar em uma lista
+      numeros.Add(2);
+
+      numeros[1] = 4;
+
+      // Para remover um item pela posição passada
+      numeros.RemoveAt(1)
+
+      // Para organizar a lista
+      numeros.Sort();
+    }
+
+    void Update()
+    { 
+
+    }
+
+}
+
+```
+
+
+## COLEÇÃO DICTIONARY / DICIONARIOS
+
+```c#
+using UnityEngine;
+
+public class Variaveis : MonoBehaviour
+{
+  Dictionary<string, string> viloes = new Dictionary<string, string>();
+
+    void Start()
+    {
+      viloes.Add("ceifador","vilão da primeira fase" + "altura:180cm")
+    }
+
+    void Update()
+    { 
+
+    }
+
+}
+
+```
+
+## Classes
+
+```c#
+using UnityEngine;
+
+public class Variaveis : MonoBehaviour
+{
+    void Start()
+    {
+     
+    }
+
+    void Update()
+    { 
+
+    }
+
+}
+class Vampiros{
+  int força, velocidade;
+  
+  void ataque(){
+
+  }
+}
+```
+
+
+## Herança
+
+Classes podem herdar caracteristicas de outras classes por exemplo a minha classe vampiros herdam da classe inimigos e ai ele sempre vai ter as funções e coisas basicas de inimigos
+
+```c#
+using UnityEngine;
+
+public class Variaveis : MonoBehaviour
+{
+    void Start()
+    {
+     
+    }
+
+    void Update()
+    { 
+
+    }
+
+}
+class Inimigos{
+  int força, velocidade;
+    
+  void ataque(){
+
+  }
+}
+
+
+class Vampiros : Inimigos{
+  
+}
+```
+
+E essas heranças podem fazer cascata ou seja se em algum momento eu queira criar um novo inimigo por exemplo "ReiVampiro" e fazer ele herdar da classe vampiros ele também vai receber da classe inimigos e assim por diante
+
+Existe um detalhe muito importante que as classes que recebem herança de outras classes so podem pegar funções e variaveis se elas estiverem como public
+
+```c#
+using UnityEngine;
+
+public class Variaveis : MonoBehaviour
+{
+    void Start()
+    {
+     
+    }
+
+    void Update()
+    { 
+
+    }
+
+}
+class Inimigos{
+  public int vida = 100;          // pode ser acessada por qualquer classe
+  private int força = 50;         // só a classe Inimigo vê
+  protected int velocidade = 10;  // visível em subclasses
+
+  // Pode ser usada em outras classes  
+  public void ataque(){
+
+  }
+
+  // essa função nao pode ser herdada
+  private void teste(){
+
+  }
+}
+
+
+class Vampiros : Inimigos{
+  
+}
+```
+
+
+## Objetos e Instâncias de classes
+
+```c#
+using UnityEngine;
+
+public class Variaveis : MonoBehaviour
+{
+
+    Vampiros Dracula = new Vampiros();
+    void Start()
+    {
+      Dracula.força = 100
+      Dracula.velocidade = 100
+    }
+
+    void Update()
+    { 
+
+    }
+
+}
+class Inimigos{
+  public int vida = 100;         
+  public int força = 50;         
+  public int velocidade = 10;  
+ 
+  public void ataque(){
+
+  }
+
+  private void teste(){
+
+  }
+}
+
+
+class Vampiros : Inimigos{
+  
+}
 ```
